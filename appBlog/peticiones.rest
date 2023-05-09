@@ -1,0 +1,81 @@
+@host = http://localhost:3000
+
+//RECUPERA TODOS LOS POST CON SU AUTOR
+GET {{host}}/api/posts
+
+//RECUPERA TODOS LOS POST DE UN AUTOR
+###
+GET {{host}}/api/posts/autor/12
+
+//RECUPERA UN POST A PARTIR DE SU ID
+###
+GET {{host}}/api/posts/25
+
+//CREA UN POST
+###
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "La tendencia del NoCode y cómo nos empoderan",
+    "descripcion": "El movimiento No Code, es una filosofía de democratización del acceso a la creación de productos digitales que busca acercar mediante abstracciones visuales la creación de software a personas que no tengan conocimientos técnicos. Buscan poder crear herramientas digitales sin tener que escribir líneas de código, sino aprovechando pequeños elementos combinados entre sí de manera visual para construir aplicaciones simplemente moviendo, arrastrando y ordenando elementos. Más allá de un conjunto aislado de herramientas, es un movimiento basado en la democratización y el acceso a soluciones complejas, mediante interfaces sencillas e interacciones visuales.",
+    "fecha_creacion": "2023-04-08",
+    "categoria": "tecnologia",
+    "pk_id_autor": 11
+}
+
+//ACTUALIZA UN POST
+###
+PUT {{host}}/api/posts/27
+Content-Type: application/json
+
+{
+    "titulo": "La tendencia del NoCode y cómo nos empoderan",
+    "descripcion": "El movimiento No Code, es una filosofía de democratización del acceso a la creación de productos digitales que busca acercar mediante abstracciones visuales la creación de software a personas que no tengan conocimientos técnicos. Buscan poder crear herramientas digitales sin tener que escribir líneas de código, sino aprovechando pequeños elementos combinados entre sí de manera visual para construir aplicaciones simplemente moviendo, arrastrando y ordenando elementos. Más allá de un conjunto aislado de herramientas, es un movimiento basado en la democratización y el acceso a soluciones complejas, mediante interfaces sencillas e interacciones visuales.",
+    "fecha_creacion": "2023-04-15",
+    "categoria": "tecnologia",
+    "pk_id_autor": 11
+}
+
+//ELIMINA UN POST)
+###
+DELETE {{host}}/api/posts/27
+
+
+//RECUPERA A TODOS LOS AUTORES
+###
+GET {{host}}/api/autores
+
+
+//RECUPERA UN AUTOR A PARTIR DE SU ID
+###
+GET {{host}}/api/autores/11
+
+//CREA UN AUTOR
+###
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "ROSA POLANCO MELGAR",
+    "email": "rosapolanco@gmail.com",
+    "imagen": "https://i.pravatar.cc/500?u=rosa.polancomelgar@peticiones.online",
+    "fecha_creacion": "2023-04-15"
+}
+
+//ACTUALIZA UN AUTOR
+###
+PUT {{host}}/api/autores/16
+Content-Type: application/json
+
+{
+    "nombre": "ROSA POLANCO MIRAMAR",
+    "email": "rosapolanco@gmail.com",
+    "imagen": "https://i.pravatar.cc/500?u=rosa.polancomelgar@peticiones.online",
+    "fecha_creacion": "2023-04-15"
+}
+
+//ELIMINA UN AUTOR
+###
+DELETE {{host}}/api/autores/16
+
